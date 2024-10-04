@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/eventListFragment">
+
+    <fragment
+        android:id="@+id/eventListFragment"
+        android:name="com.callcenter.dicodingevent.EventListFragment"
+        android:label="Event List"
+        tools:layout="@layout/fragment_event_list">
+        <argument
+            android:name="status"
+            app:argType="integer"
+            android:defaultValue="1" />
+        <action
+            android:id="@+id/action_eventListFragment_to_eventDetailActivity"
+            app:destination="@id/eventDetailActivity" />
+    </fragment>
+
+    <activity
+        android:id="@+id/eventDetailActivity"
+        android:name="com.callcenter.dicodingevent.EventDetailActivity"
+        android:label="Event Detail"
+        tools:layout="@layout/activity_event_detail" />
+
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.callcenter.dicodingevent.SettingsFragment"
+        android:label="Settings"
+        tools:layout="@layout/fragment_settings" />
+</navigation>
